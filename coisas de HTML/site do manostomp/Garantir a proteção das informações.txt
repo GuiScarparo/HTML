@@ -1,0 +1,25 @@
+Garantir a proteção das informações corporativas, minimizando riscos
+Protege Ativos da Informação
+Garante a confidencialidade, integridade, disponibilidade e autenticidade dos dados da
+empresa - incluindo informações de clientes, projetos, colaboradores e estratégias.
+Protege Ativos da Informação
+Garante a confidencialidade, integridade, disponibilidade e autenticidade dos dados da
+empresa - incluindo informações de clientes, projetos, colaboradores e estratégias.
+Define Papéis e Responsabilidades
+Estabelece quem faz o quê no processo de proteção da informação, evitando falhas
+humanas e promovendo o uso consciente dos recursos tecnológicos.
+Facilita a Continuidade dos Negócios
+Em caso de incidentes, a PSI contribui para uma resposta rápida e organizada, reduzindo
+impactos financeiros e operacionais.
+
+A empresa infosecure está planejando implementar uma PSI na sua empresa pois ela esta expandindo sua equipe e tamebm está trabalhando de forma hibrida tando presencial quanto home-office, ela quer implementar uma PSI para proteger os seus dados e definir responsabilidades para os setores
+
+Setor da educação: visa proteger os dados dos alunos, informações acadêmica e intelectuais da rede de ensino, informações 
+sigilosas como dados financeiros, etc
+De acordo com a LGPD (A Lei Geral de Proteção de Dados) somente pessoas autorizada podem ter acesso as informações 
+protegidas pela PSI e monitorada regularmente 
+
+Setor da saúde: a PSI na área da saúde protege os dados da empresa sendo do financeiro ou documentos não públicos, também inclui os dados dos pacientes, a PSI da saúde também segue a lei da LGPD (A Lei Geral de Proteção de Dados) 
+
+Setor Financeiro: a PSI assegura a proteção dos dados financeiros das empresas para que não seja vazados dados sigilosos
+essa PSI inclui os dados de clientes também pois de acordo com a LGPD (A Lei Geral de Proteção de Dados) todos os dados de uma empresa devem ser protegidos. 

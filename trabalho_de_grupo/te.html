@@ -1,0 +1,401 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossário - Linguare Academy</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        padding: 50px;
+        background-color: gray;
+        text-align: center;
+        color: white;
+      }
+
+      a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+      a:visited{
+        color: rgba(56, 88, 216, 0.525);
+      }
+
+      /* POP-UP BASE */
+      .popup {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.6);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 1000;
+      }
+
+      .popup:target {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .popup-content {
+        position: relative;
+        margin: 5% auto;
+        padding: 20px;
+        background: white;
+        width: 80%;
+        max-width: 500px;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
+
+      .fechar {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        color: red;
+        font-size: 24px;
+      }
+
+      h2, h3 {
+        margin-top: 0.5em;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      .def-popup-content {
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+      #s1{
+        margin-left: 330px;
+        margin-right: 250px;
+        padding: 10px;
+      }
+    #b1 {
+        display: block; /* ocupa toda a linha */
+        text-decoration: none;    /* remove sublinhado */
+        background: rgb(196, 196, 196);      /* azul */
+        color: rgb(20, 60, 240);             /* texto branco */
+        padding: 15px;            /* espaçamento interno */
+        border-radius: 8px;       /* cantos arredondados */
+        text-align: center;       /* centraliza o texto */
+        transition: background 0.3s;
+        margin-right: 650px;
+      }
+      #b1:hover {
+        background: #0056b3;
+      }
+
+      #b1 h2 {
+        margin: 0;
+      }
+      #s2{
+        margin-left: 430px;
+        margin-right: 530px;
+        padding: 10px;
+      }
+      #b2 {
+        display: block;           /* ocupa toda a linha */
+        text-decoration: none;    /* remove sublinhado */
+        background: rgb(196, 196, 196);      /* azul */
+        color: rgb(20, 60, 240);             /* texto branco */
+        padding: 15px;            /* espaçamento interno */
+        border-radius: 8px;       /* cantos arredondados */
+        text-align: center;       /* centraliza o texto */
+        transition: background 0.3s;
+        margin-left: 220px;
+        margin-top: -77px;
+      }
+
+      /* efeito hover */
+      #b2:hover {
+        background: #0056b3;
+      }
+
+      /* estiliza o h2 dentro do link */
+      #b2 h2 {
+        margin: 0;
+      }
+      #i1{
+        width: 350px;
+        height: 250px;
+      }
+      #s3{
+        margin-left: 390px;
+        margin-right: 200px;
+        padding: 10px;
+      }
+      #b3 {
+        display: block;           /* ocupa toda a linha */
+        text-decoration: none;    /* remove sublinhado */
+        background: rgb(196, 196, 196);      /* azul */
+        color: rgb(20, 60, 240);             /* texto branco */
+        padding: 15px;            /* espaçamento interno */
+        border-radius: 8px;       /* cantos arredondados */
+        text-align: center;       /* centraliza o texto */
+        transition: background 0.3s;
+        margin-left: 620px;
+        margin-top: -97px;
+      }
+
+      /* efeito hover */
+      #b3:hover {
+        background: #0056b3;
+      }
+
+      /* estiliza o h2 dentro do link */
+      #b3 h2 {
+        margin: 0;
+      }
+      #i2{
+        width: 250px;
+        height: 250px;
+      }
+      .video-container {
+      position: relative;
+      width: 100%;      /* ocupa toda a largura disponível */
+      max-width: 800px; /* largura máxima */
+      padding-top: 25%;
+      margin: auto;
+      border-radius: 20px; /* bordas arredondadas */
+      overflow: hidden;    /* corta o que ultrapassa o border-radius */
+      box-shadow: 10px 15px 25px rgba(0,0,0,0.5); /* sombra suave */
+      }
+      .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0; /* remove borda padrão do iframe */
+    }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>Linguare Academy</h1>
+      <h2><a href="#glossario"> começe por aqui </a></h2>
+    </header>
+    <section id="sv">
+      <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8cKnsC2lOcI?si=dFcAJ8DbG9xzCkbN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+    <!--s1-->
+    <section id="s1">
+      <a id="b1" href="#pop1">
+        <h2 id="glossario">Glossário</h2>
+      </a>
+  </section>
+  <!--s2-->
+  <section id="s2">
+    <a id="b2" href="#pop3">
+      <h2 id="etapas">etapas</h2>
+    </a>
+  </section>
+  <!--s1-->
+  <section id="s3">
+    <a id="b3" href="#pop5">
+      <h2 id="sobre">Sobre</h2>
+  </a>
+  </section>
+
+
+  <!--POP do glossario-->
+    <div id="pop1" class="popup">
+        <div class="popup-content">
+          <a href="#" class="fechar">&times;</a>
+        <h2>📖 Glossário</h2>
+
+        <h3>📚 Estrutura Acadêmica</h3>
+        <ul>
+          <li><a href="#def-curso">Curso</a></li>
+          <li><a href="#def-modulo">Módulo</a></li>
+          <li><a href="#def-cargahoraria">Carga Horária</a></li>
+          <li><a href="#def-turma">Turma</a></li>
+        </ul>
+
+        <h3>👩‍🏫 Pessoas na Instituição</h3>
+        <ul>
+          <li><a href="#def-aluno">Aluno</a></li>
+          <li><a href="#def-professor">Professor</a></li>
+          <li><a href="#def-coordenador">Coordenador Acadêmico</a></li>
+        </ul>
+
+        <h3>🏫 Espaços e Modalidades</h3>
+        <ul>
+          <li><a href="#def-presencial">Presencial</a></li>
+          <li><a href="#def-online">Online</a></li>
+          <li><a href="#def-hibrido">Híbrido</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!--pop2-->
+    <div id="def-curso" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Curso</h2>
+        <p>Conjunto de disciplinas organizadas para formação de um aluno.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-modulo" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Módulo</h2>
+        <p>Segmento de um curso que aborda um tema específico.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-cargahoraria" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Carga Horária</h2>
+        <p>Quantidade de horas dedicadas ao curso ou módulo.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-turma" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Turma</h2>
+        <p>Grupo de alunos matriculados em um curso ou módulo específico.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-aluno" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Aluno</h2>
+        <p>Pessoa matriculada e participando das atividades acadêmicas.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-professor" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Professor</h2>
+        <p>Responsável por ministrar aulas e orientar alunos.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-coordenador" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Coordenador Acadêmico</h2>
+        <p>Supervisiona o andamento dos cursos e professores.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-presencial" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Presencial</h2>
+        <p>Modalidade de ensino em que o aluno assiste aulas fisicamente na instituição.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-online" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Online</h2>
+        <p>Ensino realizado totalmente pela internet.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+
+    <div id="def-hibrido" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Híbrido</h2>
+        <p>Combinação de aulas presenciais e online.</p>
+        <p><a href="#pop1">voltar</a></p>
+      </div>
+    </div>
+    <!--POP das Etapas-->
+  <div id="pop3" class="popup">
+      <div class="popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2>etapas</h2>
+          <h3>etapas de inscrição</h3>
+          <ul>
+            <li><a href="#def-et1">Etapa 1</a></li>
+            <li><a href="#def-et2">etapa 2</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="def-et1" class="popup">
+        <div class="popup-content def-popup-content">
+          <a href="#" class="fechar">&times;</a>
+          <h2>etapa 1</h2>
+          <p>entre e crie uma conta no site.</p>
+          <p><img id="i1" src="https://i.pinimg.com/1200x/7e/1e/49/7e1e4995019801f3555f2dc13724e7b0.jpg"></p>
+          <p><a href="#pop3">voltar</a></p>
+      </div>
+    </div>
+      </div>
+      <div id="def-et2" class="popup">
+        <div class="popup-content def-popup-content">
+          <a href="#" class="fechar">&times;</a>
+          <h2>etapa 2</h2>
+          <p>olhe o plano que mais lhe interessa</p>
+          <p><img id="i2" src="https://i.pinimg.com/1200x/0d/ab/43/0dab43d260cb83130c43856d135fac16.jpg"></p>
+          <p><a href="#pop3">voltar</a></p>
+      </div>
+    </div>
+      </div>
+      <!--POP do sobre-->
+      <div id="pop5" class="popup">
+      <div class="popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2> Sobre</h2>
+          <h3>Quem trabalhou no projeto</h3>
+          <ul>
+            <li><a href="#def-gr1">Grupo 1</a></li>
+          </ul>
+      </div>
+    </div>
+    <div id="def-gr1" class="popup">
+      <div class="popup-content def-popup-content">
+        <a href="#" class="fechar">&times;</a>
+        <h2> Grupo 1</h2>
+        <ul>
+          <li><a href="https://github.com/GuiScarparo" target="_blank">Pessoa 1</a></li>
+          <li>pessoa 2</li>
+          <li>pessoa 3</li>
+          <li>pessoa 4</li>
+          <li>pessoa 5</li>
+          <li>pessoa 6</li>
+          <li>pessoa 7</li>
+        </ul>
+        <p><a href="#pop5">voltar</a></p>
+      </div>
+    </div>
+  </body>
+  </html>
