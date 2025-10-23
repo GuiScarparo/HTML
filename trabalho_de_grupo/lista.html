@@ -4,225 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glossário - Linguare Academy</title>
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        font-family: Arial, sans-serif;
-         background: linear-gradient(100deg,#567C8D,#2f4156);
-      }
-      header {
-        background: linear-gradient(100deg, #c8d9e6, #567C8D);
-        padding: 50px;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-      a {
-        color: #0066cc;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-      a:visited{
-        color: rgba(56, 88, 216, 0.525);
-      }
-
-      /* POP-UP BASE */
-      .popup {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0,0,0,0.6);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        z-index: 1000;
-      }
-
-      .popup:target {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .popup-content {
-        position: relative;
-        margin: 5% auto;
-        padding: 20px;
-        background: white;
-        width: 80%;
-        max-width: 500px;
-        max-height: 90vh;
-        overflow-y: auto;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      }
-
-      .fechar {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        text-decoration: none;
-        font-weight: bold;
-        color: red;
-        font-size: 24px;
-      }
-
-      h2, h3 {  
-        margin-top: 0.5em;
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 20px;
-      }
-      .def-popup-content {
-        max-height: 80vh;
-        overflow-y: auto;
-      }
-      #s1{
-        margin-left: 330px;
-        margin-right: 250px;
-        padding: 10px;
-      }
-    #b1 {
-        display: block; /* ocupa toda a linha */
-        text-decoration: none;    /* remove sublinhado */
-        background: rgb(196, 196, 196);      /* azul */
-        color: rgb(20, 60, 240);             /* texto branco */
-        padding: 15px;            /* espaçamento interno */
-        border-radius: 8px;       /* cantos arredondados */
-        text-align: center;       /* centraliza o texto */
-        transition: background 0.3s;
-        margin-right: 650px;
-      }
-      #b1:hover {
-        background: #0056b3;
-      }
-
-      #b1 h2 {
-        margin: 0;
-      }
-      #s2{
-        margin-left: 430px;
-        margin-right: 530px;
-        padding: 10px;
-      }
-      #b2 {
-        display: block;           /* ocupa toda a linha */
-        text-decoration: none;    /* remove sublinhado */
-        background: rgb(196, 196, 196);      /* azul */
-        color: rgb(20, 60, 240);             /* texto branco */
-        padding: 15px;            /* espaçamento interno */
-        border-radius: 8px;       /* cantos arredondados */
-        text-align: center;       /* centraliza o texto */
-        transition: background 0.3s;
-        margin-left: 220px;
-        margin-top: -77px;
-      }
-
-      /* efeito hover */
-      #b2:hover {
-        background: #0056b3;
-      }
-
-      /* estiliza o h2 dentro do link */
-      #b2 h2 {
-        margin: 0;
-      }
-      #i1{
-        width: 350px;
-        height: 250px;
-      }
-      #s3{
-        margin-left: 390px;
-        margin-right: 200px;
-        padding: 10px;
-      }
-      #b3 {
-        display: block;           /* ocupa toda a linha */
-        text-decoration: none;    /* remove sublinhado */
-        background: rgb(196, 196, 196);      /* azul */
-        color: rgb(20, 60, 240);             /* texto branco */
-        padding: 15px;            /* espaçamento interno */
-        border-radius: 8px;       /* cantos arredondados */
-        text-align: center;       /* centraliza o texto */
-        transition: background 0.3s;
-        margin-left: 620px;
-        margin-top: -97px;
-      }
-
-      /* efeito hover */
-      #b3:hover {
-        background: #0056b3;
-      }
-
-      /* estiliza o h2 dentro do link */
-      #b3 h2 {
-        margin: 0;
-      }
-      #i2{
-        width: 250px;
-        height: 250px;
-      }
-      /*video*/
-      .video-container {
-      position: relative;
-      width: 100%;      /* ocupa toda a largura disponível */
-      max-width: 800px; /* largura máxima */
-      padding-top: 25%;
-      margin: auto;
-      border-radius: 20px; /* bordas arredondadas */
-      overflow: hidden;    /* corta o que ultrapassa o border-radius */
-      box-shadow: 10px 15px 25px rgba(0,0,0,0.5); /* sombra suave */
-      }
-      .video-container iframe {
-      position: absolute;
-      top: 0; 
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0; /* remove borda padrão do iframe */
-    }
-    nav{
-        display: flex;
-        justify-content: right;
-        gap: 10px;
-        margin-bottom: 5px;
-        margin-left: 1260px;
-        margin-top: -50px;
-    }
-    nav a{
-        background-color: #f5efeb;
-        color: #2f4156;
-        padding: 7px 10px;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s, trasform 0.2;
-    }
-    #nm{
-        margin-left: 170px;
-        margin-top: -90px;
-    }
-    #sp{
-        margin-right: 59px;
-        margin-left: -60px;
-        align-items: center;
-    }
-    #des{
-        background: linear-gradient(100deg,#2f4156,#567C8D, #f5efeb);
-        border-radius: 55px;
-        word-break: break-word;
-        margin-left: 200px;
-        margin-right: 200px;
-        padding: 5px;
-    }
-    </style>
+    <link rel="stylesheet" href="lista_stylo.css">
   </head>
   <body>
 
@@ -241,11 +23,11 @@
     </header>
     <section id="sv">
       <div id="dv" class="video-container">
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/9ut9UdxH_tM?si=2LS2dguxmRpm14sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     <iframe width="560" height="315" src="invideo-ai-1080 Do zero ao fluente em 3 idiomas! 2025-09-30.mp4" title=" video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <section id="des">
         <p><h1> Bem-vindo à Escola Global!</h1></p>
-            <p><h2>Descubra um lugar onde aprender um novo idioma vai além das aulas — é uma experiência cultural, divertida e transformadora. Neste vídeo, apresentamos nossa metodologia inovadora, professores especializados e um ambiente acolhedor, projetado para que você se sinta confiante em cada etapa do aprendizado.</h2></p>
+        <p><h2>Descubra um lugar onde aprender um novo idioma vai além das aulas — é uma experiência cultural, divertida e transformadora. Neste vídeo, apresentamos nossa metodologia inovadora, professores especializados e um ambiente acolhedor, projetado para que você se sinta confiante em cada etapa do aprendizado.</h2></p>
         <p><h2>Junte-se a nós e dê o primeiro passo rumo à fluência e novas oportunidades!</h2></p>
         <p> Cursos para todas as idades</p>
         <p> Professores nativos e bilíngues</p>
@@ -266,7 +48,7 @@
       <h2 id="etapas">etapas</h2>
     </a>
   </section>
-  <!--s1-->
+  <!--s3-->
   <section id="s3">
     <a id="b3" href="#pop5">
       <h2 id="sobre">Sobre</h2>
@@ -278,29 +60,29 @@
   <!--POP do glossario-->
     <div id="pop1" class="popup">
         <div class="popup-content">
-          <a href="#" class="fechar">&times;</a>
+          <a href="#sp" class="fechar">&times;</a>
         <h2>📖 Glossário</h2>
 
         <h3>📚 Estrutura Acadêmica</h3>
         <ul>
-          <li><a href="#def-curso">Curso</a></li>
-          <li><a href="#def-modulo">Módulo</a></li>
-          <li><a href="#def-cargahoraria">Carga Horária</a></li>
-          <li><a href="#def-turma">Turma</a></li>
+          <li><a class="bot" href="#def-curso">Curso</a></li>
+          <li><a class="bot" href="#def-modulo">Módulo</a></li>
+          <li><a class="bot" href="#def-cargahoraria">Carga Horária</a></li>
+          <li><a class="bot" href="#def-turma">Turma</a></li>
         </ul>
 
         <h3>👩‍🏫 Pessoas na Instituição</h3>
         <ul>
-          <li><a href="#def-aluno">Aluno</a></li>
-          <li><a href="#def-professor">Professor</a></li>
-          <li><a href="#def-coordenador">Coordenador Acadêmico</a></li>
+          <li><a class="bot" href="#def-aluno">Aluno</a></li>
+          <li><a class="bot" href="#def-professor">Professor</a></li>
+          <li><a class="bot" href="#def-coordenador">Coordenador Acadêmico</a></li>
         </ul>
 
         <h3>🏫 Espaços e Modalidades</h3>
         <ul>
-          <li><a href="#def-presencial">Presencial</a></li>
-          <li><a href="#def-online">Online</a></li>
-          <li><a href="#def-hibrido">Híbrido</a></li>
+          <li><a class="bot" href="#def-presencial">Presencial</a></li>
+          <li><a class="bot" href="#def-online">Online</a></li>
+          <li><a class="bot" href="#def-hibrido">Híbrido</a></li>
         </ul>
       </div>
     </div>
@@ -308,7 +90,7 @@
     <!--pop2-->
     <div id="def-curso" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Curso</h2>
         <p>Conjunto de disciplinas organizadas para formação de um aluno.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -317,7 +99,7 @@
 
     <div id="def-modulo" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Módulo</h2>
         <p>Segmento de um curso que aborda um tema específico.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -326,7 +108,7 @@
 
     <div id="def-cargahoraria" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Carga Horária</h2>
         <p>Quantidade de horas dedicadas ao curso ou módulo.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -335,7 +117,7 @@
 
     <div id="def-turma" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Turma</h2>
         <p>Grupo de alunos matriculados em um curso ou módulo específico.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -344,7 +126,7 @@
 
     <div id="def-aluno" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Aluno</h2>
         <p>Pessoa matriculada e participando das atividades acadêmicas.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -353,7 +135,7 @@
 
     <div id="def-professor" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Professor</h2>
         <p>Responsável por ministrar aulas e orientar alunos.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -362,7 +144,7 @@
 
     <div id="def-coordenador" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Coordenador Acadêmico</h2>
         <p>Supervisiona o andamento dos cursos e professores.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -371,7 +153,7 @@
 
     <div id="def-presencial" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Presencial</h2>
         <p>Modalidade de ensino em que o aluno assiste aulas fisicamente na instituição.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -380,7 +162,7 @@
 
     <div id="def-online" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Online</h2>
         <p>Ensino realizado totalmente pela internet.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -389,7 +171,7 @@
 
     <div id="def-hibrido" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>Híbrido</h2>
         <p>Combinação de aulas presenciais e online.</p>
         <p><a href="#pop1">voltar</a></p>
@@ -398,14 +180,14 @@
     <!--POP das Etapas-->
   <div id="pop3" class="popup">
       <div class="popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2>etapas</h2>
           <h3>etapas de inscrição</h3>
           <ul>
-            <li><a href="#def-et1">Etapa 1</a></li>
-            <li><a href="#def-et2">Etapa 2</a></li>
-            <l1><a href="#def-et3">Etapa 3</a></l1><br>
-            <l1><a href="#def-et4">Etapa 4</a></l1>
+            <li><a class="bot" href="#def-et1">Etapa 1</a></li>
+            <li><a class="bot" href="#def-et2">Etapa 2</a></li>
+            <l1><a class="bot" href="#def-et3">Etapa 3</a></l1><br>
+            <l1><a class="bot" href="#def-et4">Etapa 4</a></l1>
           </ul>
         </div>
       </div>
@@ -420,7 +202,7 @@
       </div>
       <div id="def-et2" class="popup">
         <div class="popup-content def-popup-content">
-          <a href="#" class="fechar">&times;</a>
+          <a href="#sp" class="fechar">&times;</a>
           <h2>etapa 2</h2>
           <p>olhe o plano que mais lhe interessa</p>
           <p><a href="#pop3">voltar</a></p>
@@ -429,7 +211,7 @@
       </div>
       <div id="def-et3" class="popup">
         <div class="popup-content def-popup-content">
-          <a href="#" class="fechar">&times;</a>
+          <a href="#sp" class="fechar">&times;</a>
           <h2>etapa 2</h2>
           <p>Escolha qual linguagem deseja apender(dentre as opções disponiveis)</p>
           <p><a href="#pop3">voltar</a></p>
@@ -438,7 +220,7 @@
       </div>
       <div id="def-et4" class="popup">
         <div class="popup-content def-popup-content">
-          <a href="#" class="fechar">&times;</a>
+          <a href="#sp" class="fechar">&times;</a>
           <h2>etapa 2</h2>
           <p>Desfrute de sua aprendizagem</p>
           <p>Boa sorte</p>
@@ -452,87 +234,87 @@
       <!--POP do sobre-->
       <div id="pop5" class="popup">
       <div class="popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2> Sobre</h2>
           <h3>Quem trabalhou no projeto</h3>
           <ul>
-            <li><a href="#def-gr1">Grupo 1</a></li>
-            <l1><a href="#def-gr2">Grupo 2</a></l1><br>
-            <l1><a href="#def-gr3">Grupo 3</a></l1><br>
-            <l1><a href="#def-gr4">Grupo 4</a></l1>
+            <li><a class="bot" href="#def-gr1">Grupo 1</a></li>
+            <l1><a class="bot" href="#def-gr2">Grupo 2</a></l1><br>
+            <l1><a class="bot" href="#def-gr3">Grupo 3</a></l1><br>
+            <l1><a class="bot" href="#def-gr4">Grupo 4</a></l1>
           </ul>
       </div>
     </div>
     <div id="def-gr1" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2> Grupo 1</h2>
         <ul>
-            <li><a href="https://github.com/GuiScarparo" target="_blank">Gulherme Scarparo</a></li>
-            <li><a href="">Enzzo</a></li>
-            <li><a href="https://github.com/Diegotv39" target="_blank">Diego</a></li>
-            <li><a href="">Lívia</a></li>
-            <li><a href="">Beatriz Gonçalves</a></li>
-            <li><a href="">Núbia</a></li>
-            <li><a href="">Marcos</a></li>
-            <li><a href="https://github.com/Samugusto" target="_blank">Samuel</a></li>
+            <li><a class="bot" href="https://github.com/GuiScarparo" target="_blank">Gulherme Scarparo</a></li>
+            <li><a class="bot" href="https://github.com/GoibaGoiba" target="_blank">Enzzo</a></li>
+            <li><a class="bot" href="https://github.com/Diegotv39" target="_blank">Diego</a></li>
+            <li><a class="bot" href="" target="_blank">Lívia</a></li>
+            <li><a class="bot" href="https://github.com/biagoncalvezx">Beatriz Gonçalves</a></li>
+            <li><a class="bot" href="" target="_blank">Núbia</a></li>
+            <li><a class="bot" href="" target="_blank">Marcos</a></li>
+            <li><a class="bot" href="https://github.com/Samugusto" target="_blank">Samuel</a></li>
         </ul>
         <p><a href="#pop5">voltar</a></p>
       </div>
     </div>
     <div id="def-gr2" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2> Grupo 2</h2>
         <ul>
-            <li><a href="https://github.com/Leonardo-Pinhoo/" target="_blank">Leonardo</a></li>
-            <li><a href="https://github.com/Mar3l00" target="_blank">Marcelo</a></li>
-            <li><a href="">João Pedro</a></li>
-            <li><a href="">Anna Hilda</a></li>
-            <li><a href="">Davi</a></li>
-            <li><a href="https://github.com/caioomega">Caio</a></li>
-            <li><a href="">Gabriela</a></li>
+            <li><a class="bot" href="https://github.com/Leonardo-Pinhoo/" target="_blank">Leonardo</a></li>
+            <li><a class="bot" href="https://github.com/Mar3l00" target="_blank">Marcelo</a></li>
+            <li><a class="bot" href="" target="_blank">João Pedro</a></li>
+            <li><a class="bot" href="https://github.com/Nananilda" target="_blank">Anna Hilda</a></li>
+            <li><a class="bot" href="https://github.com/DBROww" target="_blank">Davi</a></li>
+            <li><a class="bot" href="https://github.com/caioomega" target="_blank">Caio</a></li>
+            <li><a class="bot" href="https://github.com/Gabriela-Moura" target="_blank">Gabriela</a></li>
         </ul>
         <p><a href="#pop5">voltar</a></p>
       </div>
     </div>
     <div id="def-gr3" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2> Grupo 3</h2>
         <ul>
-            <li><a href="">João Vitor</a></li>
-            <li><a href="">Bruna</a></li>
-            <li><a href="">Vinícius</a></li>
-            <li><a href="https://github.com/rianzitos?tab=repositories" target="_blank">Rian Rafael</a></li>
-            <li><a href="">Júlia</a></li>
-            <li><a href="">Yago</a></li>
-            <li><a href="">Guilherme Machado</a></li>
-            <li><a href="">Rhyan Gabriel</a></li>
+            <li><a class="bot" href="" target="_blank">João Vitor</a></li>
+            <li><a class="bot" href="" target="_blank">Bruna</a></li>
+            <li><a class="bot" href="https://github.com/Vinicius-Ribeiro019" target="_blank">Vinícius</a></li>
+            <li><a class="bot" href="https://github.com/rianzitos?tab=repositories" target="_blank">Rian Rafael</a></li>
+            <li><a class="bot" href="" target="_blank">Júlia</a></li>
+            <li><a class="bot" href="https://github.com/Yagopavan" target="_blank">Yago</a></li>
+            <li><a class="bot" href="" target="_blank">Guilherme Machado</a></li>
+            <li><a class="bot" href="" target="_blank">Rhyan Gabriel</a></li>
         </ul>
         <p><a href="#pop5">voltar</a></p>
       </div>
     </div>
     <div id="def-gr4" class="popup">
       <div class="popup-content def-popup-content">
-        <a href="#" class="fechar">&times;</a>
+        <a href="#sp" class="fechar">&times;</a>
         <h2> Grupo 4</h2>
         <ul>
-            <li><a href="">Carlos</a></li>
-            <li><a href="">Beatriz Moreira</a></li>
-            <li><a href="">Bianca</a></li>
-            <li><a href="">Gabriel Somaggio</a></li>
-            <li><a href="">Lara</a></li>
-            <li><a href="https://github.com/luizfigueiredor" target="_blank">Luiz Francisco</a></li>
-            <li><a href="">Amanda</a></li>
-            <li><a href="">Hugo</a></li>
+            <li><a class="bot" href="" target="_blank">Carlos</a></li>
+            <li><a class="bot" href="" target="_blank">Beatriz Moreira</a></li>
+            <li><a class="bot" href="" target="_blank">Bianca</a></li>
+            <li><a class="bot" href="" target="_blank">Gabriel Somaggio</a></li>
+            <li><a class="bot" href="https://github.com/Laradomingos21/" target="_blank">Lara</a></li>
+            <li><a class="bot" href="https://github.com/luizfigueiredor" target="_blank">Luiz Francisco</a></li>
+            <li><a class="bot" href="" target="_blank">Amanda</a></li>
+            <li><a class="bot" href="" target="_blank">Hugo</a></li>
         </ul>
         <p><a href="#pop5">voltar</a></p>
       </div>
     </div>
     <div id="tab" class="popup">
         <div class="popup-content">
-          <a href="#" class="fechar">&times;</a>
+          <a href="#sp" class="fechar">&times;</a>
         <h2>Tabela</h2>
         <h3><a href="ingles.html">Tabela de Inglês</a></h3>
         <h3><a href="espanhol.html">Tabela de espanhol</a></h3>
